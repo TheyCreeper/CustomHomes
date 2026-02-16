@@ -1,0 +1,28 @@
+package com.theycreeper.customhomes.utils;
+
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.level.storage.LevelResource;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class PathUtils {
+    private static final String DIR_DATA = "data";
+    private static final String DIR_customhomes = "customhomes";
+
+    private PathUtils() {
+    }
+
+    public static Path getOrCreateDataDir(MinecraftServer server) {
+        Path data = server.getWorldPath(LevelResource.ROOT).toAbsolutePath().normalize().resolve(DIR_DATA);
+        Path easyHomes = data.resolve(DIR_customhomes);
+
+        try {
+            Files.createDirectories(easyHomes);
+        } catch (IOException e) {
+            throw new IllegalStateException(e);
+        }
+        return easyHomes;
+    }
+}

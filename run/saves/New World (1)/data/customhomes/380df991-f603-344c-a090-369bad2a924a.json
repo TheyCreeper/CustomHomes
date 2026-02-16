@@ -1,0 +1,16 @@
+{
+  "homes": {
+    "test": {
+      "dimension": "ResourceKey[minecraft:dimension / minecraft:overworld]",
+      "x": 4.773865122888349,
+      "y": 56.0,
+      "z": -0.6917903701258016,
+      "rotX": 8.700016,
+      "rotY": -17.999998
+    }
+  },
+  "lastVisitedHomes": [
+    null,
+    null
+  ]
+}

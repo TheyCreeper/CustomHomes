@@ -1,0 +1,11 @@
+/home
+/sethome test
+/home test
+/mycommand
+/neoforge mods
+/tpzero
+/sethome testHome
+/home testHome
+/homes
+/reload
+/homes
